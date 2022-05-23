@@ -1,9 +1,20 @@
 import React from "react";
+import Banner from "./Banner";
+import Footer from "./Footer";
+import Header from "./Header";
+import Parts from "./Parts";
+import Reviews from "./Reviews";
+import Summery from "./Summery";
 
 const Home = () => {
   return (
     <div>
-      <h3>Hello World</h3>
+      <Header />
+      <Banner />
+      <Parts />
+      <Summery />
+      <Reviews />
+      <Footer />
     </div>
   );
 };
