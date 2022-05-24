@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "partsName": "Car Window",
+    "user": "Tamim Iqbal",
+    "rating": 5,
+    "description": "Very good product.My car is so secure now.It is much better than Daraz Mall.Highly Recommanded"
+  },
+  {
+    "id": 2,
+    "partsName": "Car Window",
+    "user": "Litton Das",
+    "rating": 5,
+    "description": "Very good product.My car is so secure now.It is much better than Daraz Mall.Highly Recommanded"
+  },
+  {
+    "id": 3,
+    "partsName": "Car Window",
+    "user": "Tamim Iqbal",
+    "rating": 5,
+    "description": "Very good product.My car is so secure now.It is much better than Daraz Mall.Highly Recommanded"
+  },
+  {
+    "id": 4,
+    "partsName": "Car Window",
+    "user": "Litton Saha",
+    "rating": 5,
+    "description": "Very good product.My car is so secure now.It is much better than Daraz Mall.Highly Recommanded"
+  },
+  {
+    "id": 5,
+    "partsName": "Car Window",
+    "user": "Tamim Iqbal",
+    "rating": 5,
+    "description": "Very good product.My car is so secure now.It is much better than Daraz Mall.Highly Recommanded"
+  },
+  {
+    "id": 6,
+    "partsName": "Car Window",
+    "user": "Litton Sa",
+    "rating": 5,
+    "description": "Very good product.My car is so secure now.It is much better than Daraz Mall.Highly Recommanded"
+  }
+]
