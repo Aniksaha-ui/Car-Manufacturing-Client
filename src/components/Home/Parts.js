@@ -4,7 +4,7 @@ import ShowParts from "./ShowParts";
 const Parts = () => {
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch("Parts.json")
+    fetch("https://mysterious-temple-55264.herokuapp.com/parts")
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, []);
@@ -17,7 +17,7 @@ const Parts = () => {
         </h3>
       </div>
       <div className="mt-8 px-12 grid grid-col-1 md:grid-cols-3 lg:grid-cols-3 gap-3 mb-6">
-        {parts.map((part) => (
+        {parts.slice(0, 6).map((part) => (
           <ShowParts part={part} key={part._id} />
         ))}
       </div>
