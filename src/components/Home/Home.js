@@ -9,12 +9,10 @@ import Summery from "./Summery";
 const Home = () => {
   return (
     <div>
-      <Header />
       <Banner />
       <Parts />
       <Summery />
       <Reviews />
-      <Footer />
     </div>
   );
 };
