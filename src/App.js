@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import FirstPage from "./components/Dashboard/FirstPage";
 import AddParts from "./components/Dashboard/AddParts";
 import AddReview from "./components/Dashboard/AddReview";
+import MyPurchase from "./components/Purchase/MyPurchase";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="users" element={<Users></Users>}></Route>
           <Route path="newparts" element={<AddParts />}></Route>
           <Route path="addreview" element={<AddReview />}></Route>
+          <Route path="mypurchase" element={<MyPurchase />}></Route>
         </Route>
       </Routes>
 
