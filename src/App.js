@@ -14,6 +14,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FirstPage from "./components/Dashboard/FirstPage";
 import AddParts from "./components/Dashboard/AddParts";
+import AddReview from "./components/Dashboard/AddReview";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route index path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<Users></Users>}></Route>
           <Route path="newparts" element={<AddParts />}></Route>
+          <Route path="addreview" element={<AddReview />}></Route>
         </Route>
       </Routes>
 
