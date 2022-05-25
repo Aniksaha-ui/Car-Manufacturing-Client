@@ -10,6 +10,10 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Users from "./components/Dashboard/Users";
 import MyProfile from "./components/Dashboard/MyProfile";
 import RequireAuth from "./components/RequireAuth.js/RequireAuth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import FirstPage from "./components/Dashboard/FirstPage";
+
 function App() {
   return (
     <div className="App">
@@ -36,12 +40,14 @@ function App() {
             </RequireAuth>
           }
         >
+          <Route index path="index" element={<FirstPage></FirstPage>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
-          <Route index path="users" element={<Users></Users>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
         </Route>
       </Routes>
 
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
