@@ -19,7 +19,7 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
 
   const [token] = useToken(user || gUser);
-  const min = 40;
+
   let signInError;
   const navigate = useNavigate();
   const location = useLocation();

@@ -33,9 +33,12 @@ const Header = () => {
       )}
       <li>
         {user ? (
-          <button className="btn btn-ghost" onClick={logout}>
-            Sign Out
-          </button>
+          <>
+            <p className="text-white">{user.displayName}</p>
+            <button className="btn btn-ghost" onClick={logout}>
+              Sign Out
+            </button>
+          </>
         ) : (
           <Link to="/login">Login</Link>
         )}
