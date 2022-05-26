@@ -18,14 +18,12 @@ const Header = () => {
       </li>
 
       <li>
-        <Link to="#">TBA</Link>
+        <Link to="/portfolio">My Portfolio</Link>
       </li>
       <li>
-        <Link to="#">TBA</Link>
+        <Link to="/blog">Blog</Link>
       </li>
-      <li>
-        <Link to="#">TBA</Link>
-      </li>
+
       {user && (
         <li>
           <Link to="/dashboard">Dashboard</Link>

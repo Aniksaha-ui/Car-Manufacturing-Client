@@ -21,6 +21,7 @@ import Payment from "./components/Purchase/Payment";
 import ManageParts from "./components/Dashboard/ManageParts";
 import NotFound from "./components/NotFound/NotFound";
 import Blog from "./components/Blog/Blog";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   return (
@@ -94,6 +95,7 @@ function App() {
         </Route>
 
         <Route path="blog" element={<Blog />}></Route>
+        <Route path="portfolio" element={<Portfolio />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

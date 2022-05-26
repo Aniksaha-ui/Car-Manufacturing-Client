@@ -5,7 +5,9 @@ import ShowReview from "./ShowReview";
 
 const Reviews = () => {
   const { data: reviews, isLoading } = useQuery("reviews", () =>
-    fetch("http://localhost:4000/review").then((res) => res.json())
+    fetch("https://mysterious-temple-55264.herokuapp.com/review").then((res) =>
+      res.json()
+    )
   );
 
   if (isLoading) {
