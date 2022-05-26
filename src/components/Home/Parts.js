@@ -15,7 +15,7 @@ const Parts = () => {
         <h3 className="text-4xl text-secondary text-center">Parts</h3>
       </div>
       <div className="mt-8 px-12 grid grid-col-1 md:grid-cols-3 lg:grid-cols-3 gap-3 mb-6">
-        {parts.slice(0, 6).map((part) => (
+        {parts.map((part) => (
           <ShowParts part={part} key={part._id} />
         ))}
       </div>

@@ -9,13 +9,16 @@ import Register from "./components/Register/Register";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Users from "./components/Dashboard/Users";
 import MyProfile from "./components/Dashboard/MyProfile";
-import RequireAuth from "./components/RequireAuth.js/RequireAuth";
+import RequireAuth from "./components/RequireAuth/RequireAuth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FirstPage from "./components/Dashboard/FirstPage";
 import AddParts from "./components/Dashboard/AddParts";
 import AddReview from "./components/Dashboard/AddReview";
 import MyPurchase from "./components/Purchase/MyPurchase";
+import ManageOrder from "./components/Dashboard/ManageOrder";
+import RequireAdmin from "../src/components/RequireAdmin/RequireAdmin";
+import Payment from "./components/Purchase/Payment";
 
 function App() {
   return (
@@ -44,10 +47,40 @@ function App() {
           }
         >
           <Route index path="profile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="users" element={<Users></Users>}></Route>
-          <Route path="newparts" element={<AddParts />}></Route>
-          <Route path="addreview" element={<AddReview />}></Route>
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <Users></Users>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="newparts"
+            element={
+              <RequireAdmin>
+                <AddParts />
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="addreview"
+            element={
+              <RequireAdmin>
+                <AddReview />
+              </RequireAdmin>
+            }
+          ></Route>
           <Route path="mypurchase" element={<MyPurchase />}></Route>
+          <Route path="payment/:id" element={<Payment />} />
+          <Route
+            path="manageorder"
+            element={
+              <RequireAdmin>
+                <ManageOrder />
+              </RequireAdmin>
+            }
+          ></Route>
         </Route>
       </Routes>
 
