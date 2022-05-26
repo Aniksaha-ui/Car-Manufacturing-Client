@@ -12,17 +12,12 @@ const Banner = () => {
           alt=""
         />
         <div>
-          <h1 className="text-2xl font-bold">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem,
-            commodi?
-          </h1>
+          <h1 className="text-2xl font-bold">Who Are We?</h1>
           <p className="py-6 text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ad cum
-            quod eos ipsam impedit, hic fugit doloremque, provident distinctio
-            autem quo nam nisi fugiat unde sint! Consequuntur nemo asperiores
-            harum doloremque magni cupiditate, sed voluptatibus? Harum amet
-            fugiat ex, cumque ratione quod adipisci, odit consectetur asperiores
-            minus pariatur ipsum.
+            OneTech is one of the best menufacturing company all over the
+            world.We purchase car in more than 80+ countries with 1200 client.We
+            Start our journey in 2019, and now we are so much happy with our
+            client.
           </p>
           <PrimaryButton>Get Ready</PrimaryButton>
         </div>
