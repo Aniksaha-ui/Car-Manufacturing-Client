@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import DeletePurchaseModal from "./DeletePurchaseModal";
 
 const MyPurchase = () => {
   const [purchase, setPurchase] = useState([]);
   const [user] = useAuthState(auth);
+  const [deletingPurchase, setPurchaseDelete] = useState(null);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -21,7 +23,7 @@ const MyPurchase = () => {
         }
       )
         .then((res) => {
-          console.log("res", res);
+          // console.log("res", res);
           if (res.status === 401 || res.status === 403) {
             signOut(auth);
             localStorage.removeItem("accessToken");
@@ -64,11 +66,21 @@ const MyPurchase = () => {
                 <td>{order.phone}</td>
                 <td>
                   {order.price && !order.paid && (
-                    <Link to={`/dashboard/payment/${order._id}`}>
-                      <button className="btn btn-xs btn-success">
-                        payment
-                      </button>
-                    </Link>
+                    <>
+                      <Link to={`/dashboard/payment/${order._id}`}>
+                        <button className="btn btn-xs btn-success">
+                          payment
+                        </button>
+                      </Link>
+
+                      <label
+                        onClick={() => setPurchaseDelete(order)}
+                        for="delete-confirm-modal"
+                        class="btn btn-xs btn-error"
+                      >
+                        Delete
+                      </label>
+                    </>
                   )}
                   {order.price && order.paid && (
                     <div>
@@ -87,6 +99,12 @@ const MyPurchase = () => {
           </tbody>
         </table>
       </div>
+      {deletingPurchase && (
+        <DeletePurchaseModal
+          deletingPurchase={deletingPurchase}
+          setPurchaseDelete={setPurchaseDelete}
+        ></DeletePurchaseModal>
+      )}
     </div>
   );
 };

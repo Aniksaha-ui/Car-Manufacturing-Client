@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const DeletePartsModal = ({ deletingParts, refetch, setPartsDelete }) => {
   const { name, _id } = deletingParts;
-  console.log(_id);
+  // console.log(_id);
   const handleDelete = () => {
     fetch(`http://localhost:4000/parts/${_id}`, {
       method: "DELETE",

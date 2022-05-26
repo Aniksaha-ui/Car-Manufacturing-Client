@@ -34,7 +34,7 @@ const MyProfile = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
 
         if (data.acknowledged === true) {
           toast(`Your Profile Updated Successfully ${user.email}`);
