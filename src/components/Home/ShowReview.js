@@ -3,7 +3,7 @@ import React from "react";
 const ShowReview = ({ review }) => {
   //   console.log(review);
   return (
-    <div className="card w-lg-max shadow-xl bg-primary p-5">
+    <div className="card w-lg-max shadow-xl bg-[#9da2bb] p-5">
       <h3 className="text-3xl text-white">{review.partsName}</h3>
       <div className="card-body text-white">
         <h2 className="text-center lg:text-3xl sm:text-2xl">
