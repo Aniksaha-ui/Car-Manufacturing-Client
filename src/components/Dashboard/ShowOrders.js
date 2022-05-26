@@ -1,22 +1,9 @@
 import React from "react";
 
 const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
-  const {
-    _id,
-    name,
-    quantity,
-    username,
-    phone,
-    email,
-    price,
-    address,
-    paid,
-    transactionId,
-  } = purchase;
+  const { _id, name, quantity, username, price, paid, transactionId } =
+    purchase;
 
-  const handleUpdateStatus = () => {
-    console.log("Update");
-  };
   // console.log(purchase);
 
   return (
@@ -27,6 +14,7 @@ const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
       <td>{quantity}</td>
       <td>{price}</td>
       <td>{quantity * price}</td>
+      <td>{paid ? "paid" : "unpaid"}</td>
       <td>
         {price && !paid && (
           <>
@@ -38,12 +26,12 @@ const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
               Delete
             </label>
 
-            <button
+            {/* <button
               className="btn btn-xs btn-error"
-              onClick={handleUpdateStatus}
+              onClick={() => handleUpdateStatus(_id)}
             >
               Update
-            </button>
+            </button> */}
           </>
         )}
         {price && paid && (

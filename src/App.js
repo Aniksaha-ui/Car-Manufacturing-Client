@@ -18,6 +18,7 @@ import MyPurchase from "./components/Purchase/MyPurchase";
 import ManageOrder from "./components/Dashboard/ManageOrder";
 import RequireAdmin from "../src/components/RequireAdmin/RequireAdmin";
 import Payment from "./components/Purchase/Payment";
+import ManageParts from "./components/Dashboard/ManageParts";
 
 function App() {
   return (
@@ -77,6 +78,14 @@ function App() {
             element={
               <RequireAdmin>
                 <ManageOrder />
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageparts"
+            element={
+              <RequireAdmin>
+                <ManageParts />
               </RequireAdmin>
             }
           ></Route>
