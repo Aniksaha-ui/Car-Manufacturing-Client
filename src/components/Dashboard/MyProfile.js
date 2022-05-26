@@ -21,14 +21,17 @@ const MyProfile = () => {
     data.phone = phoneRef.current.value;
     data.education = educationRef.current.value;
     data.location = locationRef.current.value;
-    fetch(`http://localhost:4000/profile?email=${email}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      `https://mysterious-temple-55264.herokuapp.com/profile?email=${email}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -40,6 +43,8 @@ const MyProfile = () => {
   };
   return (
     <>
+      <h3 class="text-2xl">{user.displayName}</h3>
+      <h2 class="text-xl">{user.email}</h2>
       <div class="flex justify-center mt-20">
         <div class="card w-96 bg-base-100 shadow-xl">
           <div class="card-body items-center text-center">

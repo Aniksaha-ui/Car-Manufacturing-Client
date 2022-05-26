@@ -10,9 +10,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Users from "./components/Dashboard/Users";
 import MyProfile from "./components/Dashboard/MyProfile";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import FirstPage from "./components/Dashboard/FirstPage";
 import AddParts from "./components/Dashboard/AddParts";
 import AddReview from "./components/Dashboard/AddReview";
 import MyPurchase from "./components/Purchase/MyPurchase";
@@ -83,7 +82,6 @@ function App() {
           ></Route>
         </Route>
       </Routes>
-
       <Footer />
       <ToastContainer />
     </div>

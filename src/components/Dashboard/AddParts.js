@@ -37,7 +37,7 @@ const AddParts = () => {
             img: img,
           };
           // send to your database
-          fetch("http://localhost:4000/parts", {
+          fetch("https://mysterious-temple-55264.herokuapp.com/parts", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -48,10 +48,10 @@ const AddParts = () => {
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted.insertedId) {
-                toast.success("Doctor added successfully");
+                toast.success("Parts added successfully");
                 reset();
               } else {
-                toast.error("Failed to add the doctor");
+                toast.error("Failed to add the Parts");
               }
             });
         }

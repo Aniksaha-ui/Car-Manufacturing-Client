@@ -21,7 +21,7 @@ const AddReview = () => {
     data.rating = ratingRef.current.value;
     data.user = user.displayName;
 
-    fetch("http://localhost:4000/reviews", {
+    fetch("https://mysterious-temple-55264.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
