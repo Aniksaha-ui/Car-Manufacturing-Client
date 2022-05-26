@@ -1,8 +1,30 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
-  const { _id, name, quantity, username, price, paid, transactionId } =
+  const { _id, name, quantity, username, price, paid, transactionId, status } =
     purchase;
+
+  const handleUpdateStatus = (id) => {
+    const data = {};
+    data.status = "delivered";
+    fetch(`https://mysterious-temple-55264.herokuapp.com/purchase/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+
+        if (data.acknowledged === true) {
+          toast(`Delivered successfully`);
+        }
+      });
+  };
 
   // console.log(purchase);
 
@@ -15,6 +37,9 @@ const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
       <td>{price}</td>
       <td>{quantity * price}</td>
       <td>{paid ? "paid" : "unpaid"}</td>
+      <td>{status ? status : "pending"}</td>
+      <td>{transactionId}</td>
+
       <td>
         {price && !paid && (
           <>
@@ -25,22 +50,16 @@ const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
             >
               Delete
             </label>
-
-            {/* <button
-              className="btn btn-xs btn-error"
-              onClick={() => handleUpdateStatus(_id)}
-            >
-              Update
-            </button> */}
           </>
         )}
         {price && paid && (
           <div>
-            <p>
-              Transaction id:{" "}
-              <span className="text-success">{transactionId}</span>
-              (paid)
-            </p>
+            <button
+              className="btn btn-xs btn-error"
+              onClick={() => handleUpdateStatus(_id)}
+            >
+              Update
+            </button>
           </div>
         )}
       </td>

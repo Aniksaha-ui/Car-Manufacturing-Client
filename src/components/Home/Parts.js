@@ -4,7 +4,7 @@ import ShowParts from "./ShowParts";
 const Parts = () => {
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch("https://mysterious-temple-55264.herokuapp.com/parts")
+    fetch("http://localhost:4000/allparts")
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, []);

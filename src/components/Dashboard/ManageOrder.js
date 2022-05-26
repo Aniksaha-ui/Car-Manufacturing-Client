@@ -11,7 +11,7 @@ const ManageOrder = () => {
     isLoading,
     refetch,
   } = useQuery("purchases", () =>
-    fetch("http://localhost:4000/purchase", {
+    fetch("https://mysterious-temple-55264.herokuapp.com/purchase", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -36,7 +36,9 @@ const ManageOrder = () => {
               <th>quantity</th>
               <th>Unit Price</th>
               <th>total price</th>
+              <th>Paid Status</th>
               <th>Status</th>
+              <th>Payment Id</th>
               <th>Action</th>
             </tr>
           </thead>

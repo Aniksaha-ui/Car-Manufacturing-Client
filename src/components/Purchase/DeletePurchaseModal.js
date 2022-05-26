@@ -6,7 +6,7 @@ const DeletePurchaseModal = ({ deletingPurchase, setPurchaseDelete }) => {
   const { name, _id } = deletingPurchase;
   //   console.log(_id);
   const handleDelete = () => {
-    fetch(`http://localhost:4000/purchase/${_id}`, {
+    fetch(`https://mysterious-temple-55264.herokuapp.com/purchase/${_id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
