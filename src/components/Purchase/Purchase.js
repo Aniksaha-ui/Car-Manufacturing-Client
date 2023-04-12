@@ -19,7 +19,7 @@ const Purchase = () => {
   useEffect(() => {
     const getParts = async () => {
       const email = user.email;
-      const url = `https://mysterious-temple-55264.herokuapp.com/parts/${id}?email=${email}`;
+      const url = `https://manufactureing.sahacompany.site/parts/${id}?email=${email}`;
       try {
         const { data } = await axios.get(url, {
           headers: {
@@ -60,7 +60,7 @@ const Purchase = () => {
       toast.error(`Not in stock this amount`);
       return;
     } else {
-      fetch("https://mysterious-temple-55264.herokuapp.com/purchase", {
+      fetch("https://manufactureing.sahacompany.site/purchase", {
         method: "POST",
         headers: {
           "content-type": "application/json",

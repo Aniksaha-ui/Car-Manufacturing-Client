@@ -21,17 +21,14 @@ const MyProfile = () => {
     data.phone = phoneRef.current.value;
     data.education = educationRef.current.value;
     data.location = locationRef.current.value;
-    fetch(
-      `https://mysterious-temple-55264.herokuapp.com/profile?email=${email}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-        body: JSON.stringify(data),
-      }
-    )
+    fetch(`https://manufactureing.sahacompany.site/profile?email=${email}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+      body: JSON.stringify(data),
+    })
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

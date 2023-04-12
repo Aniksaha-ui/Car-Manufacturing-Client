@@ -14,7 +14,7 @@ const MyPurchase = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://mysterious-temple-55264.herokuapp.com/mypurchse?email=${user.email}`,
+        `https://manufactureing.sahacompany.site/mypurchse?email=${user.email}`,
         {
           method: "GET",
           headers: {

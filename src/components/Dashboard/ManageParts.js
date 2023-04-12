@@ -12,7 +12,7 @@ const ManageParts = () => {
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch("https://mysterious-temple-55264.herokuapp.com/admin/parts", {
+    fetch("https://manufactureing.sahacompany.site/admin/parts", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

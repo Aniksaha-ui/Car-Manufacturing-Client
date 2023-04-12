@@ -5,7 +5,7 @@ const ShowUsers = ({ user, refetch }) => {
   const { email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`https://mysterious-temple-55264.herokuapp.com/user/admin/${email}`, {
+    fetch(`https://manufactureing.sahacompany.site/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

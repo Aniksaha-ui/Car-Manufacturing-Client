@@ -21,7 +21,7 @@ const AddReview = () => {
     data.rating = ratingRef.current.value;
     data.user = user.displayName;
 
-    fetch("https://mysterious-temple-55264.herokuapp.com/reviews", {
+    fetch("https://manufactureing.sahacompany.site/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

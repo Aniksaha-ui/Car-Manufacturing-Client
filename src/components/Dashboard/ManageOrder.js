@@ -11,7 +11,7 @@ const ManageOrder = () => {
     isLoading,
     refetch,
   } = useQuery("purchases", () =>
-    fetch("https://mysterious-temple-55264.herokuapp.com/purchase", {
+    fetch("https://manufactureing.sahacompany.site/purchase", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -37,7 +37,7 @@ const AddParts = () => {
             img: img,
           };
           // send to your database
-          fetch("https://mysterious-temple-55264.herokuapp.com/parts", {
+          fetch("https://manufactureing.sahacompany.site/parts", {
             method: "POST",
             headers: {
               "content-type": "application/json",

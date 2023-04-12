@@ -8,7 +8,7 @@ const ShowOrders = ({ purchase, refetch, setOrderDelete }) => {
   const handleUpdateStatus = (id) => {
     const data = {};
     data.status = "delivered";
-    fetch(`https://mysterious-temple-55264.herokuapp.com/purchase/${id}`, {
+    fetch(`https://manufactureing.sahacompany.site/purchase/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

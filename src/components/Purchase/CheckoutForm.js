@@ -13,17 +13,14 @@ const CheckoutForm = ({ purchase }) => {
   const { _id, username, email, price, quantity } = purchase;
 
   useEffect(() => {
-    fetch(
-      "https://mysterious-temple-55264.herokuapp.com/create-payment-intent",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-        body: JSON.stringify({ price }),
-      }
-    )
+    fetch("https://manufactureing.sahacompany.site/create-payment-intent", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+      body: JSON.stringify({ price }),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data?.clientSecret) {
@@ -81,7 +78,7 @@ const CheckoutForm = ({ purchase }) => {
         transactionId: paymentIntent.id,
         amount: quantity * price,
       };
-      fetch(`https://mysterious-temple-55264.herokuapp.com/purchase/${_id}`, {
+      fetch(`https://manufactureing.sahacompany.site/purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

@@ -6,7 +6,7 @@ Server-side github link:[https://github.com/programming-hero-web-course1/manufac
 
 Client-side Live link: [https://manufacturing-fe9f8.web.app/](https://manufacturing-fe9f8.web.app/)
 
-server-side Live link : [https://mysterious-temple-55264.herokuapp.com/](https://mysterious-temple-55264.herokuapp.com/)
+server-side Live link : [https://manufactureing.sahacompany.site/](https://manufactureing.sahacompany.site/)
 
 ## What done in this project
 
